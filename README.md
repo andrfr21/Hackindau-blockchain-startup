@@ -19,7 +19,7 @@ This repository contains the project we developed during **Hackathon Dauphine**,
 3. Launch the web app locally (Apache/Nginx + PHP).
 
 ## 👥 Team
-- François Andréani  
+- François Andreani  
 - Raphaël Capranico  
 - Roc de Larouziere  
 
