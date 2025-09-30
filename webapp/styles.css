@@ -1,0 +1,291 @@
+* {
+    margin: 5;
+    padding: 5;
+    box-sizing: border-box;
+}
+
+/* Styles globaux */
+body {
+    font-family: 'Poppins', sans-serif; /* Police plus moderne et élégante */
+    background-color: #f0f2f5; /* Couleur de fond douce */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+    line-height: 1.6;
+}
+p {
+    font-family: 'Merriweather', serif; /* Police élégante et lisible */
+    font-size: 20px; /* Taille de police légèrement plus grande pour un effet moderne */
+    line-height: 1.8; /* Espacement entre les lignes pour un texte bien aéré */
+    color: #4a4a4a; /* Couleur grise douce */
+    margin: 20px 0; /* Marges en haut et en bas pour espacer les paragraphes */
+    text-align: center; /* Texte centré */
+    letter-spacing: 0.5px; /* Espacement subtil entre les lettres */
+    transition: color 0.3s ease-in-out; /* Transition douce pour les interactions */
+}
+
+p:hover {
+    color: #333; /* Changement subtil de couleur au survol */
+}
+
+
+h1 {
+    font-size: 44px; /* Taille de la police grande et élégante */
+    line-height: 56px; /* Espacement entre les lignes */
+    font-weight: 600; /* Poids de la police légèrement plus gras */
+    color: #333; /* Couleur du texte */
+    margin: 50px 0 30px; /* Belle marge avec 50px en haut et 30px en bas */
+    text-align: center; /* Centrer le titre */
+    text-transform: uppercase; /* Tout en majuscules pour un effet moderne */
+    letter-spacing: 2px; /* Espacement entre les lettres pour un style épuré */
+    transition: color 0.3s ease-in-out; /* Transition douce sur la couleur */
+}
+
+h1:hover {
+    color: #007bff; /* Changement de couleur au survol pour un effet interactif */
+}
+
+
+/* Mode sombre */
+body.dark-mode {
+    background-color: #121212; /* Fond sombre */
+    color: #e0e0e0; /* Couleur du texte claire */
+}
+
+/* Conteneur principal */
+.container {
+    max-width: 700px; /* Largeur maximale légèrement plus large */
+    margin: 60px auto; /* Plus d'espace pour aérer la mise en page */
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+body.dark-mode .container {
+    background: #1e1e1e; /* Conteneur sombre */
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Titres */
+h2 {
+    text-align: center;
+    color: #0066cc;
+    margin-bottom: 30px;
+    font-size: 26px; /* Taille du texte plus grande */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+body.dark-mode h2 {
+    color: #66b2ff; /* Couleur du titre en mode sombre */
+}
+
+/* Champs de formulaire */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0;
+    border: 1px solid #ddd; /* Bordure plus douce */
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+
+input:focus {
+    border-color: #0066cc; /* Couleur de focus */
+    background-color: #eef6ff;
+    outline: none; /* Suppression de l'outline */
+}
+
+body.dark-mode input[type="text"],
+body.dark-mode input[type="email"],
+body.dark-mode input[type="password"] {
+    background-color: #2a2a2a;
+    color: #fff;
+    border-color: #444;
+}
+
+/* Bouton */
+button {
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Effet de dégradé moderne */
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 20%;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex; /* Active Flexbox */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    text-align: center; /* Centre le texte */
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0056b3, #003f7f);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode button {
+    background: linear-gradient(135deg, #0056b3, #003f7f); /* Couleur du bouton en mode sombre */
+}
+
+body.dark-mode button:hover {
+    background: linear-gradient(135deg, #004494, #002e5f);
+}
+
+/* Liste des résultats */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    display: flex; /* Flex pour un meilleur agencement */
+    justify-content: space-between; /* Espacement entre les éléments */
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+ul li:hover {
+    background-color: #f0f8ff; /* Couleur au survol */
+}
+
+ul li:last-child {
+    border-bottom: none; /* Pas de bordure sur le dernier élément */
+}
+
+body.dark-mode ul li {
+    border-bottom: 1px solid #444;
+}
+
+body.dark-mode ul li:hover {
+    background-color: #333;
+}
+
+/* Lien de retour */
+a {
+    display: block;
+    margin-top: 30px;
+    text-align: center;
+    color: #0066cc;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #004494;
+}
+
+body.dark-mode a {
+    color: #66b2ff; /* Couleur du lien en mode sombre */
+}
+
+body.dark-mode a:hover {
+    color: #3399ff; /* Couleur du lien au survol en mode sombre */
+}
+
+/* Navigation */
+nav {
+    background: #007bff; /* Couleur de fond du nav */
+    padding: 15px;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around; /* Espacement égal entre les éléments */
+}
+
+nav ul li a {
+    color: white; /* Couleur du texte */
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2); /* Couleur au survol */
+}
+
+body.dark-mode nav {
+    background: #1e1e1e; /* Couleur du nav en mode sombre */
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode nav ul li a {
+    color: #f1f1f1; /* Couleur des liens en mode sombre */
+}
+
+body.dark-mode nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Bouton Mode Sombre */
+#mode-sombre {
+    background: #343a40; /* Couleur pour le bouton mode sombre */
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+#mode-sombre:hover {
+    background: #495057;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode #mode-sombre {
+    background: #1e1e1e;
+}
+
+body.dark-mode #mode-sombre:hover {
+    background: #333;
+}
+
+button {
+    font-family: 'Poppins', sans-serif; /* Police moderne */
+    font-size: 16px; /* Taille de la police */
+    font-weight: 600; /* Texte légèrement en gras */
+    color: white; /* Couleur du texte en blanc */
+    background-color: #007bff; /* Couleur de fond bleu moderne */
+    border: none; /* Pas de bordure */
+    padding: 12px 30px; /* Espacement à l'intérieur du bouton */
+    border-radius: 8px; /* Coins légèrement arrondis */
+    cursor: pointer; /* Curseur de pointeur */
+    display: inline-block; /* Empêche le bouton de prendre toute la largeur */
+    text-transform: uppercase; /* Texte en majuscules pour un effet moderne */
+    margin: 10px; /* Ajout d'une marge pour espacer les boutons */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transitions pour les interactions */
+
+}
+
+button:hover {
+    background-color: #0056b3; /* Couleur plus foncée au survol */
+    transform: scale(1.05); /* Légère augmentation de la taille au survol */
+}
+
+button:active {
+    transform: scale(1); /* Retour à la taille d'origine lors du clic */
+}
+.center-container {
+    text-align: center; /* Centre le bouton horizontalement */
+}
+
